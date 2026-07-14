@@ -1,5 +1,7 @@
 # tokensmith
 
+[![WCAG AA](https://img.shields.io/badge/WCAG_AA-Verified-brightgreen)](https://github.com/hyemkim96-glitch/tokensmith)
+
 Generate OKLCH design tokens from one brand color, with WCAG AA contrast baked in.
 
 ```
@@ -36,6 +38,11 @@ so a hand-edited color that breaks contrast fails the build instead of shipping.
 # .github/workflows/tokens.yml
 - run: npx tokensmith check brand-tokens.json
 ```
+
+### `tokensmith badge <tokens.json>`
+
+Prints a shields.io markdown badge reflecting the tokens file's current WCAG AA
+pass/fail state — paste it into your README next to the one above.
 
 ## How it works
 

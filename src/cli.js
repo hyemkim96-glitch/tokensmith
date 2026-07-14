@@ -2,6 +2,7 @@
 import { Command } from 'commander';
 import { initCommand } from './commands/init.js';
 import { checkCommand } from './commands/check.js';
+import { badgeCommand } from './commands/badge.js';
 
 const program = new Command();
 
@@ -21,5 +22,10 @@ program
   .command('check <tokensJson>')
   .description('re-validate a tokensmith-generated tokens.json against WCAG AA (CI-friendly, exits 1 on failure)')
   .action(checkCommand);
+
+program
+  .command('badge <tokensJson>')
+  .description('print a shields.io WCAG AA badge (markdown) reflecting the tokens file\'s current pass/fail state')
+  .action(badgeCommand);
 
 program.parse();
