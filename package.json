@@ -1,0 +1,19 @@
+{
+  "name": "tokensmith",
+  "version": "0.1.0",
+  "description": "Generate OKLCH design tokens from one brand color, with WCAG AA contrast baked in.",
+  "type": "module",
+  "bin": {
+    "tokensmith": "src/cli.js"
+  },
+  "scripts": {
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "commander": "^12.1.0"
+  },
+  "devDependencies": {
+    "vitest": "^2.1.9"
+  },
+  "license": "MIT"
+}
